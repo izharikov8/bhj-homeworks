@@ -5,6 +5,7 @@ const button_close = document.querySelectorAll("div.modal__close");
 
 button_good.onclick = function() {
     document.getElementById("modal_success").className = "modal modal_active";
+    document.getElementById("modal_main").className = "modal";
 }
 
 for (idx = 0; idx < button_close.length; idx++) {
