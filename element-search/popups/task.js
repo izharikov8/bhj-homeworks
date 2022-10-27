@@ -1,15 +1,15 @@
 document.getElementById("modal_main").className = "modal modal_active";
 
-const button_good = document.querySelector(".show-success");
-const button_close = document.querySelectorAll("div.modal__close");
+const BUTTON_GOOD = document.querySelector(".show-success");
+const BUTTON_CLOSE = document.querySelectorAll("div.modal__close");
 
-button_good.onclick = function() {
+BUTTON_GOOD.onclick = function() {
     document.getElementById("modal_success").className = "modal modal_active";
     document.getElementById("modal_main").className = "modal";
 }
 
-for (idx = 0; idx < button_close.length; idx++) {
-    let el = button_close.item(idx);
+for (idx = 0; idx < BUTTON_CLOSE.length; idx++) {
+    let el = BUTTON_CLOSE.item(idx);
     el.onclick = function() {
         document.getElementById("modal_main").className = "modal";
         document.getElementById("modal_success").className = "modal";
