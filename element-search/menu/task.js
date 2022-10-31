@@ -9,11 +9,11 @@ for (let idx = 0; idx < menuLink.length; idx++) {
 					menuItem[i].querySelector('.menu_sub').className = 'menu menu_sub'
 				}
 			}
-		    menuItem[idx].querySelector('.menu_sub').className = ('menu menu_sub menu_active');
+		    menuItem[idx].querySelector('.menu_sub').className = 'menu menu_sub menu_active';
             return menuItem[idx].href = false;
 		}
 		else if (menuItem[idx].querySelector('.menu_sub') !== null && menuItem[idx].querySelector('.menu_active') !== null) {
-			menuItem[idx].querySelector('.menu_sub').className = 'menu menu_sub'
+			menuItem[idx].querySelector('.menu_sub').className = 'menu menu_sub';
 			return menuItem[idx].href = false;
 		}
 	}
