@@ -1,5 +1,5 @@
-let btn = document.querySelector('.dropdown__value')
-let activator = document.querySelector('.dropdown__list')
+const btn = document.querySelector('.dropdown__value')
+const activator = document.querySelector('.dropdown__list')
 const buttons = document.querySelectorAll('.dropdown__item')
 
 
@@ -13,7 +13,9 @@ btn.onclick = function () {
 
 for (var idx = 0; idx < buttons.length; idx ++) {
     buttons[idx].addEventListener('click', function(event) {
-        btn.textContent = event.target.textContent;
+        document.querySelector('.dropdown__value').textContent = event.target.textContent;
+        activator.className = 'dropdown__list'
+        event.preventDefault()
     })}
 
 
