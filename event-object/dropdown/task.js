@@ -13,7 +13,7 @@ btn.onclick = function () {
 
 for (var idx = 0; idx < buttons.length; idx ++) {
     buttons[idx].addEventListener('click', function(event) {
-        document.querySelector('.dropdown__value').textContent = event.target.textContent;
+        btn.textContent = event.target.textContent;
         activator.className = 'dropdown__list'
         event.preventDefault()
     })}
