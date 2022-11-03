@@ -17,17 +17,3 @@ for (var idx = 0; idx < buttons.length; idx ++) {
         activator.className = 'dropdown__list'
         event.preventDefault()
     })}
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
