@@ -1,5 +1,4 @@
 const bookBtn = document.querySelector('.book');
-const fonts = Array.from(document.querySelectorAll('.font-size'))
 
 bookBtn.onclick = function(event) {
     for (var idx = 0; idx < fonts.length; idx++) {
