@@ -3,9 +3,10 @@ let observer = new IntersectionObserver(onEntry);
 function onEntry(entry) {
     entry.forEach(change => {
       if (change.isIntersecting) {
-        change.target.classList.add('reveal_active');
+        change.target.classList.add('reveal_active');}
+      else {change.target.classList.remove('reveal_active');}
       }
-    });
+    );
   }
 
 
