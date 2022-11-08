@@ -1,16 +1,15 @@
-const popUps = Array.from(document.querySelectorAll('.reveal'))
+let observer = new IntersectionObserver(onEntry);
 
-for (var idx = 0; idx < popUps.length; idx++) {
-    const { top, bottom } = popUps[idx].getBoundingClientRect();
-    if (popUps[idx].bottom < 0) {
-        popUps[idx].className = 'reveal'
+function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('reveal_active');
+      }
+    });
+  }
 
-    }
 
-    if (popUps[idx].top > window.innerHeight) {
-        popUps[idx].className = 'reveal'
-    }
-    else {
-        popUps[idx].className = 'reveal reveal_active'
-    }
-}
+  let elements = document.querySelectorAll('.reveal');
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
